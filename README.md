@@ -33,4 +33,5 @@ https://transform.tools/html-to-jsx
 <label for=""> to <label htmlFor=""> 
 <input> to <input/>
 
-
+##To avoid ESLint error during deployment copypaste the code given in the link in "next.config.js"
+https://nextjs.org/docs/api-reference/next.config.js/ignoring-eslint
