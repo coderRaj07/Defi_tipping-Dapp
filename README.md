@@ -1,6 +1,6 @@
 ##Deploying smartcontracts on local testnets using remix
-open and select injected web3 in remix
-select the prefered testnet and deploy
+open and select injected web3 in remix 
+select the prefered testnet and deploy (This dapp is deployed on Goerli test network)
 
 ##to create next app
 npx create-next-app@latest
