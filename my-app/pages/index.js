@@ -197,7 +197,7 @@ export default function Home() {
   return(
    <div key={idx} style={{border:"2px solid", "borderRadius":"5px", padding: "5px", margin: "5px"}}> 
      <h1 style={{"fontWeight":"bold"}}>"{memo.message}"</h1>
-     <p>From: {memo.name} at {memo.timestamp.toString()}</p>
+     <p>From: {memo.name} at {(new Date(memo.timestamp*1000)).toString}</p>
    </div>)}))}
 
   <footer className={styles.footer}>
