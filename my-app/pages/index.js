@@ -46,7 +46,11 @@ export default function Home() {
     return web3Provider;
   };
 
-
+  const date =(unix_timeStamp)=>{
+    let date = new Intl.DateTimeFormat
+     ('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+     .format()
+  }
 
   //Read-only functions
   const getMemos= async () => {
@@ -197,9 +201,7 @@ export default function Home() {
   return(
    <div key={idx} style={{border:"2px solid", "borderRadius":"5px", padding: "5px", margin: "5px"}}> 
      <h1 style={{"fontWeight":"bold"}}>"{memo.message}"</h1>
-     <p>From: {memo.name} at {new Intl.DateTimeFormat
-     ('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' })
-     .format(memo.timestamp)}</p>
+     <p>From: {memo.name} at {date(memo.timestamp)}</p>
    </div>)}))}
 
   <footer className={styles.footer}>
